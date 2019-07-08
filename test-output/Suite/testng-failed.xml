@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="Invalidpasswd" value="p@sswor"/>
+  <parameter name="timeoutseconds" value="15"/>
+  <parameter name="usernm" value="sunila1"/>
+  <parameter name="passwd" value="p@ssword1"/>
+  <parameter name="Invalidusernm" value="sunil"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="http://www.newtours.demoaut.com/mercurywelcome.php"/>
+  <test name="Test">
+    <parameter name="Invalidpasswd" value="p@sswor"/>
+    <parameter name="timeoutseconds" value="15"/>
+    <parameter name="usernm" value="sunila1"/>
+    <parameter name="passwd" value="p@ssword1"/>
+    <parameter name="Invalidusernm" value="sunil"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://www.newtours.demoaut.com/mercurywelcome.php"/>
+    <classes>
+      <class name="com.model.modules.Launch">
+        <methods>
+          <include name="executeLaunch"/>
+        </methods>
+      </class> <!-- com.model.modules.Launch -->
+      <class name="com.model.modules.Login">
+        <methods>
+          <include name="executwithInvalidds"/>
+          <include name="executwithvalidds"/>
+        </methods>
+      </class> <!-- com.model.modules.Login -->
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <parameter name="Invalidpasswd" value="p@sswor"/>
+    <parameter name="timeoutseconds" value="15"/>
+    <parameter name="usernm" value="sunila1"/>
+    <parameter name="passwd" value="p@ssword1"/>
+    <parameter name="Invalidusernm" value="sunil"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://www.newtours.demoaut.com/mercurywelcome.php"/>
+    <classes>
+      <class name="com.model.modules.Login">
+        <methods>
+          <include name="executwithInvalidds" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.model.modules.Login -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
