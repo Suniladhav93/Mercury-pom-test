@@ -23,10 +23,12 @@ public class Loginpage
 	public void enterUsername(String username)
 	{
 		objusername.sendKeys(username);
+		System.out.println("username enter successfully");
 	}
 	public void enterPassword(String password)
 	{
 		objpassword.sendKeys(password);
+		System.out.println("password enter successfully");
 	}
 	public void clickonLogin()
 	{
